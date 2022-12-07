@@ -1,0 +1,19 @@
+.test{
+    background-color: red;
+    display: block;
+    width: 40vw;
+    height: 40vh;
+}
+
+
+.logo{
+    display: flex;
+    width: 10%;
+    background-color: green;
+    justify-content: space-between;
+}
+
+.span{
+    border-radius: 50%;
+    background-color: black;
+}
