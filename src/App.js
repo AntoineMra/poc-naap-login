@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/style/App.css';
 import { Login } from './views/Login';
 
 function App() {
