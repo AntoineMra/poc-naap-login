@@ -5,15 +5,21 @@
     height: 40vh;
 }
 
-
-.logo{
-    display: flex;
-    width: 10%;
-    background-color: green;
-    justify-content: space-between;
+.title{
+    width: fit-content;
+    margin-left: 45%;
 }
 
-.span{
+.icon{
+    display: flex;
+    margin-left: 19%;
+    width: fit-content;
+    justify-content: center;
+}
+
+.image{
+    background-color: gray;
     border-radius: 50%;
-    background-color: black;
+    width: 10%;
+margin-left: 3%;
 }
