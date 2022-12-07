@@ -4,7 +4,9 @@ import key from '../assets/icons/key.svg'
 
 import React from 'react'
 
-export const Forms = () => {
+export const Forms = (props) => {
+    // TODO: Create a var with useState foreach input (Email & Pwd)
+
     return (
         <div className="forms-page-container">
             <div className='forms-container'>
@@ -24,6 +26,8 @@ export const Forms = () => {
                         <img src={key} alt="Key Icon" className='login-input-icons' />
                         <input type="password" className='login-input  login-input-password' />
                     </div>
+
+                    <button className='login-form-submit' type="submit" onClick={props.handleSubmit}>Envoyer</button>
                 </form>
             </div>
         </div>
