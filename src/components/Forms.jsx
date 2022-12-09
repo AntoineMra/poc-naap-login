@@ -1,6 +1,7 @@
 import '../assets/style/Forms.css';
 import sms from '../assets/icons/sms.svg'
 import key from '../assets/icons/key.svg'
+import logo from '../assets/img/logo192.png'
 
 import React from 'react'
 
@@ -10,11 +11,11 @@ export const Forms = (props) => {
     return (
         <div className="forms-page-container">
             <div className='forms-container'>
-                <p>Se connecter</p>
-                <div className='logo'>
-                    <span className='span'>t</span>
-                    <span>te</span>
-                    <span>tes</span>
+                <p className='title'>Se connecter</p>
+                <div className='icon'>
+                    <img className='image' src={logo}></img>
+                    <img className='image' src={logo}></img>
+                    <img className='image' src={logo}></img>
                 </div>
 
                 <form className='login-form-container'>
