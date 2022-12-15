@@ -1,4 +1,3 @@
-import './assets/style/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Login } from './views/Login';
 import { Redirected } from './views/Redirected';
