@@ -1,16 +1,18 @@
-/* 
-  WARNING: 
-  please follow the order as described below 
-  to prevent any use error! 
-*/
 
 /* 1 - requirements */
 @use 'tools/reset';
+@use 'variables/colors';
+@use 'variables/fonts';
+@use 'variables/mediaqueries';
+@use 'variables/mixins';
 
 /* 2 - base model */
 @use 'global/base';
 
 /* 3 - components */
+@use 'components/forms';
+@use 'components/login';
+@use 'components/sidebar';
 
 /* 4 - pages */
 
