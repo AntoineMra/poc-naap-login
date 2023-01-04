@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 //Data test 
 let Data = [
     {
-        'email' : "g",
+        'email' : "g@y.com",
         'mdp' : 'ynov'
     },
     {
-        'email' : "k",
+        'email' : "k@y.com",
         'mdp' : 'ynov'
     }
 ]
@@ -19,6 +19,7 @@ let Data = [
 
 export const Login = () => {
     const handleSubmit = (email , psw) => {
+        console.log('passe')
         let id = -1
         let lenght = (Data.length - 1 )
         while(lenght != -1){
@@ -38,9 +39,7 @@ export const Login = () => {
     }
 let navigate = useNavigate()
     const onAuthenticationSucces = (id) => {
-        // Must redirect to the '/redirected url once user is loged
-        console.log('%c passed but don t redirrected ' + id, 'color : green;')
-        
+        // Must redirect to the '/redirected url once user is loged   
         navigate('/redirected')
 
     }

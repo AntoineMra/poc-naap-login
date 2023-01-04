@@ -23,7 +23,7 @@ export const Forms = (props) => {
                 </div>
 
                 <form className='login-form-container'>
-                    <div className='input-containeremail'>
+                    <div className='input-container'>
                         
                         <input type="email" className='login-input  login-input-email' onChange={(e) => { SetMail(e.target.value)}}/>
                     </div>
