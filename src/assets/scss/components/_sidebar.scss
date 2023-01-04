@@ -55,13 +55,23 @@
 
 .sidebar-menu-icon {
     color: #fff;
-    font-size: 18px;
+    font-size: xx-large;
     cursor: pointer;
     display: none;
 
 }
 
-@include mixins.breakpoint-up('medium') {
+@include mixins.breakpoint-up('mobile') {
+    .sidebar{
+        background-color: transparent;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        padding: 0 25px;
+        position: fixed;
+        z-index: 1;
+
+    }
     .sidebar-menu-icon {
         display: block;
         color: gray;
@@ -73,14 +83,13 @@
     .content {
         display: block;
         position: fixed;
-    background: red;
-    height: 100%;
-    width: 100%;
+        background-color: #0036C2;
+        background-attachment: fixed;
+    height: 200%;
     left: -100%;
     margin-left: 0;
-    max-width: 350px;
+    max-width: 100%;
     overflow-y: auto;
-    padding-bottom: 100px;
     transition: all 0.3s ease;
     z-index: 1;
     }
@@ -88,8 +97,4 @@
     .sidebar #show-menu:checked ~ .content {
         left: 0;
     }
-    .sidebar #show-menu:checked ~ .content {
-        display: block;
-    }
-
 }
