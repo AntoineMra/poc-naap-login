@@ -5,7 +5,7 @@
 /// @require size.$breakpoints
 @mixin breakpoint-up($breakpoint) {
   @if map-has-key(size.$breakpoints, $breakpoint) {
-    @media (min-width: map-get(size.$breakpoints, $breakpoint)) {
+    @media (max-width: map-get(size.$breakpoints, $breakpoint)) {    //changed from min-width to max-width 
       @content;
     }
   }

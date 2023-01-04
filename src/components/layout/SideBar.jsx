@@ -4,10 +4,14 @@ import Image from "../../assets/img/logo512.png";
 export const SideBar = () => {
   return (
     <div className='sidebar'>
+      <input type="checkbox" id="show-menu"/>
+      <label for="show-menu" className="sidebar-menu-icon"><i className="fa fa-bars"></i></label>
+      <div className="content"> 
       <div className='sidebar-container'>
         <img src={Image} alt='logo naapp' className='sidebar-logo' />
       </div>
-      <p className='sidebar-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam possimus harum nulla expedita quae aperiam numquam voluptatibus quisquam cum, perferendis magni magnam optio rem voluptatum incidunt quia deserunt perspiciatis aliquam.</p>
+     
+         <p className='sidebar-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam possimus harum nulla expedita quae aperiam numquam voluptatibus quisquam cum, perferendis magni magnam optio rem voluptatum incidunt quia deserunt perspiciatis aliquam.</p>
       <p className='sidebar-footer'> Made by the best devs of the world in 2022</p>
       <div className='sidebar-reseaux'>
         <a href="https://fr.linkedin.com/in/lo%C3%A9lia-galliez-6bb7981b4" target="_blank" rel='noreferrer'>
@@ -20,6 +24,8 @@ export const SideBar = () => {
           <i className="sidebar-socials fa fa-brands fa-facebook"></i>
         </a>
       </div>
+      </div>
+     
 
     </div>
   );
