@@ -23,14 +23,15 @@ export const Forms = (props) => {
                 </div>
 
                 <form className='login-form-container'>
-                    <div className='input-container'>
+                    <div className='input-containeremail'>
                         
                         <input type="email" className='login-input  login-input-email' onChange={(e) => { SetMail(e.target.value)}}/>
                     </div>
-                    <div className='input-container'>
+                    <div className='input-containerpsw'>
                         
                         <input type="password" className='login-input  login-input-password' onChange={(e) => { SetPassWord(e.target.value)}}/>
                     </div>
+                    <a className='new-account-button'href='/register'>crée un compte</a>
 
                     <button className='login-form-submit' type="submit" onClick={() => props.handleSubmit(Mail , passWord)}>Envoyer</button>
                 </form>
