@@ -1,0 +1,12 @@
+@use '../variables/mediaqueries' as size;
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require size.$breakpoints
+@mixin breakpoint-up($breakpoint) {
+  @if map-has-key(size.$breakpoints, $breakpoint) {
+    @media (min-width: map-get(size.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}

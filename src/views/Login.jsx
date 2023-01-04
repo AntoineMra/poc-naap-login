@@ -1,5 +1,4 @@
 import React from 'react'
-import '../assets/style/login.css'
 import { Forms } from '../components/Forms';
 import { SideBar } from '../components/layout/SideBar';
 

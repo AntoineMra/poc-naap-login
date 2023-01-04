@@ -1,8 +1,4 @@
-import '../assets/style/Forms.css';
-import sms from '../assets/icons/sms.svg'
-import key from '../assets/icons/key.svg'
 import logo from '../assets/img/logo192.png'
-
 import React from 'react'
 
 export const Forms = (props) => {
@@ -11,20 +7,20 @@ export const Forms = (props) => {
     return (
         <div className="forms-page-container">
             <div className='forms-container'>
-                <p className='title'>Se connecter</p>
-                <div className='icon'>
-                    <img className='image' src={logo}></img>
-                    <img className='image' src={logo}></img>
-                    <img className='image' src={logo}></img>
+                <h1 className='form-header-title'>Se connecter</h1>
+                <div className='form-header-socials'>
+                    <img className='form-header-image' src={logo} alt="Social Media 3rd part connection logo" />
+                    <img className='form-header-image' src={logo} alt="Social Media 3rd part connection logo" />
+                    <img className='form-header-image' src={logo} alt="Social Media 3rd part connection logo" />
                 </div>
 
                 <form className='login-form-container'>
                     <div className='input-container'>
-                        <img src={sms} alt="Mail Icon" className='login-input-icons' />
+                        
                         <input type="email" className='login-input  login-input-email' />
                     </div>
                     <div className='input-container'>
-                        <img src={key} alt="Key Icon" className='login-input-icons' />
+                        
                         <input type="password" className='login-input  login-input-password' />
                     </div>
 
