@@ -11,9 +11,15 @@ export const Forms = (props) => {
             <div className='forms-container'>
                 <h1 className='form-header-title'>Se connecter</h1>
                 <div className='form-header-socials'>
-                    <img className='form-header-image' src={logo} alt="Social Media 3rd part connection logo" />
-                    <img className='form-header-image' src={logo} alt="Social Media 3rd part connection logo" />
-                    <img className='form-header-image' src={logo} alt="Social Media 3rd part connection logo" />
+                    <a href="https://fr.linkedin.com" target="_blank" rel='noreferrer'>
+                        <i className="form-header-image fa fa-brands fa-google"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel='noreferrer'>
+                        <i className="form-header-image fa fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://fr-fr.facebook.com/" target="_blank" rel='noreferrer'>
+                        <i className="form-header-image fa fa-brands fa-facebook"></i>
+                    </a>
                 </div>
 
                 <form className='login-form-container'>
