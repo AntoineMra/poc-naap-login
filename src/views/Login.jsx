@@ -15,8 +15,6 @@ let Data = [
     }
 ]
 
-
-
 export const Login = () => {
     const handleSubmit = (email , psw) => {
         console.log('passe')

@@ -24,7 +24,7 @@ export const NewAccountFirstStep = (props) => {
                     <div className='input-container'>
                         <input type="password" placeholder='Confirmer votre MDP' className='login-input  login-input-password' onChange={(e) => { SetPassSecondWord(e.target.value)}}/>
                     </div>
-                    <button className='login-form-submit' type="submit" onClick={() => props.EmailAndPassWord(Email , firstPassWord , secondPassWord)}>Envoyer</button>
+                    <button className='login-form-submit LeftMargin-Button18' type="submit" onClick={() => props.EmailAndPassWord(Email , firstPassWord , secondPassWord)}>Suivant</button>
                     
                 </form>
             </div>
