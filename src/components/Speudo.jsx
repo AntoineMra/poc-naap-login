@@ -24,7 +24,7 @@ export const Speudo = (props) => {
                     </div>
 
                     <div className='input-container'>
-                        <input type="password" placeholder='Confirmer votre non' className='login-input  login-input-Nom' onChange={(e) => { SetNom(e.target.value)}}/>
+                        <input type="Nom" placeholder='Entrer votre Nom' className='login-input  login-input-Nom' onChange={(e) => { SetNom(e.target.value)}}/>
                     </div>
                     <button className='login-form-submit LeftMargin-Button18' type="submit" onClick={() => props.UserInfo(Speudo , Prenom , Nom)}>Suivant</button>
                     
