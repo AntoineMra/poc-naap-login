@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Choice } from './views/UserChoices';
 import { Login } from './views/Login';
 import { Redirected } from './views/Redirected';
 import { Register } from './views/Register';
@@ -11,6 +12,7 @@ function App() {
           <Route path='/' index={true} element={<Login />} />
           <Route path='/redirected' element={<Redirected />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/userChoice' element={<Choice />} />
         </Routes>
       </BrowserRouter>
     </>
