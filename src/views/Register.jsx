@@ -8,7 +8,7 @@ export const Register = () => {
             //TODO , Mail verification is the email is not already in the DB
             //Todo , create the account in the API
             if(PSW1 === PSW2) {
-                navigate('/userChoice',{ state : {Email : email}})
+                navigate('/RegisterTwo')
             } else {
                 //TODO make PSW1 != PSW2
             }
