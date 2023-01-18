@@ -5,8 +5,8 @@ export const Speudo = (props) => {
     // TODO: 
 
     const [Speudo,  SetSpeudo] = useState("");
-    const [Prenom, SetPrenom] = useState("");
-    const [Nom, SetNom] = useState("");
+    const [FirstName, SetFirstName] = useState("");
+    const [LastName, SetLastName] = useState("");
 
 
 
@@ -20,13 +20,13 @@ export const Speudo = (props) => {
                     </div>
 
                     <div className='input-container'>
-                        <input type="Prenom" placeholder='Entrer votre Prénom' className='login-input  login-input-Prenom' onChange={(e) => { SetPrenom(e.target.value)}}/>
+                        <input type="Prenom" placeholder='Entrer votre Prénom' className='login-input  login-input-Prenom' onChange={(e) => { SetFirstName(e.target.value)}}/>
                     </div>
 
                     <div className='input-container'>
-                        <input type="Nom" placeholder='Entrer votre Nom' className='login-input  login-input-Nom' onChange={(e) => { SetNom(e.target.value)}}/>
+                        <input type="Nom" placeholder='Entrer votre Nom' className='login-input  login-input-Nom' onChange={(e) => { SetLastName(e.target.value)}}/>
                     </div>
-                    <button className='login-form-submit LeftMargin-Button18' type="submit" onClick={() => props.UserInfo(Speudo , Prenom , Nom)}>Suivant</button>
+                    <button className='login-form-submit LeftMargin-Button18' type="submit" onClick={() => props.SpeudoDataExtraction(Speudo , FirstName , LastName)}>Suivant</button>
                     
                 </form>
             </div>

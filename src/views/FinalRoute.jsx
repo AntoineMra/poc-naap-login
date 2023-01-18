@@ -4,16 +4,16 @@ import { SideBar } from '../components/layout/SideBar';
 import { Biography } from '../components/Biography';
 import { useLocation } from 'react-router-dom';
 
-export const Curious = () => {
+export const FinalRoute = () => {
     
     const navigate = useNavigate() 
     const {state} = useLocation()
-    const DataForTheAccount = state.DataForTheAccount
+    console.log(state.DataForTheAccount)
     const BioPage = (BioEntry) => {
         //Todo check if the bio is ok with web rules
-        DataForTheAccount.Bio = BioEntry
-        console.log(DataForTheAccount)
-        navigate("redirected",{state : {DataForTheAccount : DataForTheAccount}})
+        state.DataForTheAccount.Bio = BioEntry
+        console.log(state.DataForTheAccount)
+        navigate("/redirected",{state : {DataForTheAccount : state.DataForTheAccount}})
 
     }
         return (
@@ -22,6 +22,5 @@ export const Curious = () => {
             <Biography BioPage={BioPage}/>
         </div>
         )
-
 }
     
