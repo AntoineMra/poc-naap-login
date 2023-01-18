@@ -1,3 +1,6 @@
+@use '../variables/colors';
+@use '../variables/fonts';
+
 .test {
         width: 100%;
         height: 100vh;
@@ -7,7 +10,7 @@
 }
 
 .title-header{
-    text-decoration: underline gray ;
+    border-bottom: 5px solid gray;
 }
 
 .radio-container{
@@ -15,7 +18,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
     margin-top: 35px;
 
     input[type="radio"] {
@@ -25,11 +27,48 @@
 
 
 input[type="radio"].role + label {
-    padding: 0.3rem 0.5rem;
-  border: 1px dashed #ccc;
+   background-color: #E4E4E4;
+height: 10vh;
+width: 50vw;
+color: colors.$primary;
+line-height: 1.5;
+border-radius: 5px;
+font-size: x-large;
+margin: 5px;
+text-align: center;
+cursor: pointer;
+vertical-align: middle;
+
+    
 }
 
 input[type="radio"].role:checked + label {
-    padding: 0.3rem 0.5rem;
-  border: 1px solid #ccc;
+    background-color: #E4E4E4;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.button-container{
+    display: block;
+    margin-top: 35px;;
+    margin-left: 45vw;
+    height: 2vw;
+    width: 5vw;
+}
+.button{
+    padding: 10px 15px;
+    background-color: colors.$primary;
+    border-radius: 25px;
+    border: solid 3px transparent;
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #FFF;
+    border: solid 3px colors.$primary;
+    color: colors.$primary;
+    transition: 0.3s;
 }

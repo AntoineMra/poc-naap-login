@@ -13,18 +13,29 @@ export const Choice = () => {
         Email : state.Email,
         Role : -1
     };
-
-    let Bio = ""   
+    
+    
         const BioPage = (BioEntry) => {
             //Todo check if the bio is ok with web rules
             DataForTheAccount.Bio = BioEntry
         }
 
+
+    const SaveRole = (role) => {
+        console.log(role)
+        DataForTheAccount.Role = role
+        console.log(DataForTheAccount)
+        // Must redirect to the '/redirected url once user is loged
+        navigate('/redirected')
+    }
+
+
+
+
     return (
         <div className='login-form'>
             <SideBar/>
-            <Biography BioPage = {BioPage}/>
+        <UserChoice saveRole={SaveRole}/>
         </div>
     )
 }
-//<UserChoice/>
