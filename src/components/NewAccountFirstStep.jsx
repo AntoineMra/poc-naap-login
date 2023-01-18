@@ -1,4 +1,3 @@
-import logo from '../assets/img/logo192.png'
 import React from 'react'
 import { useState } from "react";
 
@@ -7,6 +6,7 @@ export const NewAccountFirstStep = (props) => {
     const [firstPassWord, SetPassFirstWord] = useState("");
     const [secondPassWord, SetPassSecondWord] = useState("");
     const [Email, SetEMail] = useState("");
+
     return (
         <div className="forms-page-container">
             <div className='forms-container'>
@@ -24,10 +24,10 @@ export const NewAccountFirstStep = (props) => {
                     <div className='input-container'>
                         <input type="password" placeholder='Confirmer votre MDP' className='login-input  login-input-password' onChange={(e) => { SetPassSecondWord(e.target.value)}}/>
                     </div>
-
+                    <button className='login-form-submit' type="submit" onClick={() => props.EmailAndPassWord(Email , firstPassWord , secondPassWord)}>Envoyer</button>
                     
                 </form>
             </div>
         </div>
     )
-}//! <button className='login-form-submit' type="submit" onClick={(Email , firstPassWord , secondPassWord) => props.EmailAndPassWord(Email , firstPassWord , secondPassWord)}>Envoyer</button>
+} 

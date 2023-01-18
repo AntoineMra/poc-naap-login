@@ -1,4 +1,3 @@
-import logo from '../assets/img/logo192.png'
 import React from 'react'
 import { useState } from "react";
 

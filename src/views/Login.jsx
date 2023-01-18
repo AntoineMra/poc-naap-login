@@ -22,7 +22,7 @@ export const Login = () => {
         console.log('passe')
         let id = -1
         let lenght = (Data.length - 1 )
-        while(lenght != -1){
+        while(lenght !== -1){
             if(Data[lenght].email === email){
                 if(Data[lenght].mdp === psw){
                     id = lenght
