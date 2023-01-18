@@ -9,6 +9,7 @@ export const Choice = () => {
     const IndexStep = 0
     const navigate = useNavigate()
     const {state} = useLocation()
+    console.log("\n\n" ,state)
 
     const DataForTheAccount = {
         Bio : "",

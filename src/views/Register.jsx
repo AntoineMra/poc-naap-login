@@ -8,12 +8,10 @@ export const Register = () => {
             //TODO , Mail verification is the email is not already in the DB
             //Todo , create the account in the API
             if(PSW1 === PSW2) {
-                navigate('/RegisterTwo')
+                navigate('/userChoice', { state:{Email : email}})
             } else {
                 //TODO make PSW1 != PSW2
-            }
-            
-            
+            }       
     } 
         return (
         <div className='login-form'>
@@ -21,6 +19,5 @@ export const Register = () => {
             <NewAccountFirstStep EmailAndPassWord = {EmailAndPassWord} />
         </div>
         )
-
 }
     
