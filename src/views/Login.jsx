@@ -47,7 +47,7 @@ let navigate = useNavigate()
     return (
         <div className='login-form'>
             <SideBar />
-            <Forms handleSubmit={handleSubmit} onAuthenticationSucces={onAuthenticationSucces}/>
+            <Forms handleSubmit={handleSubmit}/>
         </div>
     )
 }
