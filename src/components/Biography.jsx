@@ -20,3 +20,9 @@ export const Biography = (props) => {
         </div>
     )
 } 
+
+   /*import { Biography } from '../components/Biography';
+   const BioPage = (BioEntry) => {
+        //Todo check if the bio is ok with web rules
+        DataForTheAccount.Bio = BioEntry
+    }*/
