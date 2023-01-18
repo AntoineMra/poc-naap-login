@@ -16,7 +16,7 @@ export const Speudo = (props) => {
                 <h1 className='form-header-title'>Renseigner vos informations</h1>
                 <form className='login-form-container'>
                     <div className='input-container'>
-                        <input type="Speudo" placeholder='Entrer votre Speudo' className='login-input  login-input-Speudo' onChange={(e) => { SetSpeudo(e.target.value)}}/>
+                        <input type="Speudo" placeholder='Entrer votre Pseudo' className='login-input  login-input-Speudo' onChange={(e) => { SetSpeudo(e.target.value)}}/>
                     </div>
 
                     <div className='input-container'>

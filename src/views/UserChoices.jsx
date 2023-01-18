@@ -3,10 +3,10 @@ import { UserChoice } from '../components/UserChoice';
 import { SideBar } from '../components/layout/SideBar';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import { Speudo } from '../components/Speudo'
 export const Choice = () => {
 
-    const IndexStep = 1
+    const IndexStep = 0
     const navigate = useNavigate()
     const {state} = useLocation()
 
@@ -41,7 +41,7 @@ export const Choice = () => {
         return (
             <div className='login-form'>
                 <SideBar/>
-
+                <Speudo/>
             </div>
         )
         case 1: //! Role
