@@ -14,6 +14,7 @@ export const Biography = (props) => {
                         <textarea  placeholder='écriver votre biographie' className='Bio-Text-box' onChange={(e) => { SetBio(e.target.value)}}/>
                     
                     <button className='login-form-submit LeftMargin-Button35' type="submit" onClick={() => props.BioPage(Bio)}>Suivant</button>
+                    <button className='Bio-ignore-font' type="submit" onClick={() => props.BioPage("")}>Ignorer</button>
                     
                 </form>
             </div>

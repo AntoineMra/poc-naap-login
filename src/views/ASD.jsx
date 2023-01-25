@@ -8,7 +8,7 @@ export const ASD = () => {
     let navigate = useNavigate()
     const { state } = useLocation()
     const AsdArrayExtraction = (array) => {
-        state.NeuroBalises = array 
+        state.NeuroBalises = array
         console.log(state)//! Nerobalise don't cross the navigate 
         navigate("/FinalRoute",{state : {DataForTheAccount : state.DataForTheAccount}})
     }

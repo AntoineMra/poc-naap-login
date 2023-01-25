@@ -20,7 +20,7 @@ export const Register = () => {
             //Todo , create the account in the API
             if(PSW1 === PSW2) {
                 DataForTheAccount.Email = email
-                navigate('/userChoice', { state : {DataForTheAccount : DataForTheAccount}})
+                navigate('/name', { state : {DataForTheAccount : DataForTheAccount}})
             } else {
                 //TODO make PSW1 != PSW2
             }       
