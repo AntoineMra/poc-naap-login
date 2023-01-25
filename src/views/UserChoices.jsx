@@ -8,17 +8,20 @@ export const Choice = () => {
     const navigate = useNavigate()
     const {state} = useLocation() 
 
+    const ReturnToPreviousPage = () => {
+        navigate('/name', {state : {DataForTheAccount : state.DataForTheAccount}})
+    }
     const SaveRole = (role) => {
         state.DataForTheAccount.Role = role
         switch(role) {
             case "NEUROATYPIQUE" :
-            navigate("/ASD",{state : {DataForTheAccount : state.DataForTheAccount}})
+            navigate("/NEUROATYPIQUE",{state : {DataForTheAccount : state.DataForTheAccount}})
             break
             case "Curieux" :
             navigate("/FinalRoute",{state : {DataForTheAccount : state.DataForTheAccount}})
             break
             case "Professionel" :
-            navigate("/Professional",{state : {DataForTheAccount : state.DataForTheAccount}})
+            navigate("/Professionel",{state : {DataForTheAccount : state.DataForTheAccount}})
             break
             default :
             console.log("Error : The role is not valid")
@@ -29,7 +32,7 @@ export const Choice = () => {
         return (
             <div className='login-form'>
                 <SideBar/>
-                <UserChoice saveRole={SaveRole}/>
+                <UserChoice saveRole={SaveRole} ReturnToPreviousPage={ReturnToPreviousPage}/>
             </div>
         )
     }

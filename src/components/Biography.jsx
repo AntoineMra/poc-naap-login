@@ -6,7 +6,9 @@ export const Biography = (props) => {
     const [Bio, SetBio] = useState("");
 
     return (
+
         <div className="forms-page-container">
+        <button className='ButtonButton-To-Previous-Page' type="submit" onClick={() => props.ReturnToPreviousPage()}/>
             <div className='forms-container'>
                 <h1 className='form-header-title'>Dites nous en plus sur vous</h1>
                 <form className='login-form-container'>

@@ -7,6 +7,11 @@ import { Asd } from '../components/ASD';
 export const ASD = () => {
     let navigate = useNavigate()
     const { state } = useLocation()
+    
+    const ReturnToPreviousPage = () => {
+        navigate('/userChoice', {state : {DataForTheAccount : state.DataForTheAccount}})
+    }
+
     const AsdArrayExtraction = (array) => {
         state.NeuroBalises = array
         console.log(state)//! Nerobalise don't cross the navigate 
@@ -15,7 +20,7 @@ export const ASD = () => {
         return (
         <div className='login-form'>
             <SideBar/>
-            <Asd AsdArrayExtraction={AsdArrayExtraction}/>
+            <Asd AsdArrayExtraction={AsdArrayExtraction} ReturnToPreviousPage={ReturnToPreviousPage}/>
         </div>
         )
 

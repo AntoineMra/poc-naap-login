@@ -8,7 +8,9 @@ export const Name = () => {
     const navigate = useNavigate()
     const {state} = useLocation() 
 
-    console.log(state.DataForTheAccount)
+    const ReturnToPreviousPage = () => {
+        navigate('/register', {state : {DataForTheAccount : state.DataForTheAccount}})
+    }
     const SpeudoDataExtraction = (Speudo , FirstName , LastName) => {
         state.DataForTheAccount.Speudo = Speudo
         state.DataForTheAccount.Name = FirstName
@@ -19,7 +21,7 @@ export const Name = () => {
         return (
             <div className='login-form'>
                 <SideBar/>
-                <Speudo SpeudoDataExtraction={SpeudoDataExtraction}/>
+                <Speudo SpeudoDataExtraction={SpeudoDataExtraction} ReturnToPreviousPage={ReturnToPreviousPage}/>
             </div>
         )
 }

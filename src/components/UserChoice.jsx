@@ -12,6 +12,7 @@ export const UserChoice = (props) => {
 
     return (
         <div className="forms-page-container">
+            <button className='ButtonButton-To-Previous-Page' type="submit" onClick={() => props.ReturnToPreviousPage()}/>
             <div className='forms-container'>
                 <h1 className='form-header-title title-header'>Indiquez nous qui vous êtes !</h1>
             <div className="radio-container" onChange={(e) => { SetRole(e.target.value)}}>

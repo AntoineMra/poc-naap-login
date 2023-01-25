@@ -19,6 +19,7 @@ export const Asd = (props) => {
 
     return (
         <div className="forms-page-container">
+            <button className='ButtonButton-To-Previous-Page' type="submit" onClick={() => props.ReturnToPreviousPage()}/>
             <div className='forms-container'>
                 <h1 className='form-header-title'>Lorem ipsum dolor sit amet.</h1>
                 <form className='login-form-container'>
