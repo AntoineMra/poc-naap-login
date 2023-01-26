@@ -8,7 +8,14 @@ export const FinalRoute = () => {
     
     const navigate = useNavigate() 
     const {state} = useLocation()
-    console.log(state.DataForTheAccount)
+    
+    const ReturnToPreviousPage = () => {
+        if(state.DataForTheAccount.Role !== "Curieux") {
+        navigate('/'+state.DataForTheAccount.Role, {state : {DataForTheAccount : state.DataForTheAccount}})
+    } else {
+        navigate('/userChoice', {state : {DataForTheAccount : state.DataForTheAccount}})
+    }
+}
     const BioPage = (BioEntry) => {
         //Todo check if the bio is ok with web rules
         state.DataForTheAccount.Bio = BioEntry
@@ -19,7 +26,7 @@ export const FinalRoute = () => {
         return (
         <div className='login-form'>
             <SideBar/>
-            <Biography BioPage={BioPage}/>
+            <Biography BioPage={BioPage} ReturnToPreviousPage={ReturnToPreviousPage}/>
         </div>
         )
 }

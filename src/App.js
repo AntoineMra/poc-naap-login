@@ -6,6 +6,7 @@ import { Register } from './views/Register';
 import { ASD } from './views/ASD';
 import { Professional } from './views/Professional';
 import { FinalRoute } from './views/FinalRoute'; 
+import { Name } from './views/Name';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
           <Route path='/' index={true} element={<Login />} />
           <Route path='/redirected' element={<Redirected />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/name' element={<Name />} />
           <Route path='/userChoice' element={<Choice />} />
-          <Route path='/ASD' element={<ASD />} />
-          <Route path='/Professional' element={<Professional />} />
+          <Route path='/NEUROATYPIQUE' element={<ASD />} />
+          <Route path='/Professionel' element={<Professional />} />
           <Route path='/FinalRoute' element={<FinalRoute />} />
         </Routes>
       </BrowserRouter>

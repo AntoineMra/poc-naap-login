@@ -14,13 +14,15 @@ export const Register = () => {
         FamilyName: "",
         NeuroBalises : [],
     };
-
+    const ReturnToPreviousPage = () => {
+        navigate('/')
+    }
     const  EmailAndPassWord = (email , PSW1, PSW2) => {
             //TODO , Mail verification is the email is not already in the DB
             //Todo , create the account in the API
             if(PSW1 === PSW2) {
                 DataForTheAccount.Email = email
-                navigate('/userChoice', { state : {DataForTheAccount : DataForTheAccount}})
+                navigate('/name', { state : {DataForTheAccount : DataForTheAccount}})
             } else {
                 //TODO make PSW1 != PSW2
             }       
@@ -28,7 +30,7 @@ export const Register = () => {
         return (
         <div className='login-form'>
             <SideBar/>
-            <NewAccountFirstStep EmailAndPassWord = {EmailAndPassWord} />
+            <NewAccountFirstStep EmailAndPassWord = {EmailAndPassWord} ReturnToPreviousPage={ReturnToPreviousPage}/>
         </div>
         )
 }

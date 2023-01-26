@@ -19,13 +19,19 @@ export const SideBar = () => {
           <a href="https://www.instagram.com/" target="_blank" rel='noreferrer'>
             <i className="sidebar-socials fa fa-brands fa-instagram"></i>
           </a>
-          <a href="https://fr-fr.facebook.com/" target="_blank" rel='noreferrer'>
-            <i className="sidebar-socials fa fa-brands fa-facebook"></i>
+          <a href="https://fr.linkedin.com/in/lo%C3%A9lia-galliez-6bb7981b4" target="_blank" rel='noreferrer'>
+            <i className="sidebar-socials fa fa-brands fa-linkedin"></i>
           </a>
         </div>
-        <nav>
-          <p className='sidebar-footer'> Made by the best devs of the world in 2022</p>
-        </nav>
+        <footer className='sidebar-footer'>
+          <nav className='sidebar-footer-nav'>
+            <a className='side-footer-link'>Mentions légales</a>
+            <a className='side-footer-link'>Paramètrer les cookies</a>
+            <a className='side-footer-link'>Politique de confidentialité</a>
+            <a className='side-footer-link'>Nous contacter</a>
+            <a className='side-footer-link'>Aide</a>
+          </nav>
+        </footer>
       </div>
     </div>
   );

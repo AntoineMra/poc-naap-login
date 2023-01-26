@@ -16,6 +16,7 @@
     min-width: 300px;
     max-width: 425px;
     padding: 0 25px;
+    display: flex;
 }
 
 .sidebar input[type="checkbox"] {
@@ -26,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 125px;
+    margin-top: 30vh;
 }
 
 .sidebar-logo {
@@ -39,22 +40,44 @@
     font-size: 16px;
 }
 
-.sidebar-footer {
-    color: rgb(187, 187, 187);
+.sidebar-content-next {
+    display: flex;
+    justify-content: center;
+    font-style: bold;
+    text-decoration: underline;
     width: 100%;
-    margin-top: 150px;
+    margin-top: 30px;
+    font-size: 1.2vw;
 }
 
-.sidebar-reseaux {
-    margin-top: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
+.sidebar-footer {
+
+    color: black;
+    font-style: bold;
+    width: 70%;
+    margin-top: 10px;
+    font-size: 0.7vw;
+
+    :hover {
+        color: white;
+    }
 }
+
+
+footer {
+    width: 21vw;
+    position: fixed;
+    left: 15px;
+    width: 20vw;
+    bottom: 10px;
+    color: white;
+    cursor: pointer;
+}
+
 
 .sidebar-socials {
-    margin: 0 10px;
+
+    margin: 10px 5px;
     font-size: 2rem;
     color: white;
 }
@@ -85,6 +108,7 @@
     }
 
     .sidebar #show-menu:checked~.sidebar-menu-icon i::before {
+        transition: all 0.3s ease;
         font-size: xx-large;
         content: "\f00d";
     }
