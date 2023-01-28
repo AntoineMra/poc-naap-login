@@ -8,7 +8,7 @@ export const SideBar = () => {
   return (
     <div className='sidebar'>
       <input type="checkbox" id="show-menu" />
-      <label for="show-menu" className="sidebar-menu-icon"><i className="fa fa-bars"></i></label>
+      <label htmlFor="show-menu" className="sidebar-menu-icon"><i className="fa fa-bars"></i></label>
       <div className="sidebar-content">
         <header className='empty-container'>
         </header>

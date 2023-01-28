@@ -6,33 +6,22 @@ export const Forms = (props) => {
     const [passWord, SetPassWord] = useState("");
     const [Mail, SetMail] = useState("");
     return (
-        <div className="forms-page-container">
-            <div className='forms-container'>
-                <h1 className='form-header-title'>Se connecter</h1>
-                <div className='form-header-socials'>
-                    <a href="https://fr.linkedin.com" target="_blank" rel='noreferrer'>
-                        <i className="form-header-image fa fa-brands fa-google"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel='noreferrer'>
-                        <i className="form-header-image fa fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://fr-fr.facebook.com/" target="_blank" rel='noreferrer'>
-                        <i className="form-header-image fa fa-brands fa-facebook"></i>
-                    </a>
-                </div>
-
-                <form className='login-form-container'>
-                    <div className='input-container'>
-                        
-                        <input type="email" className='login-input  login-input-email' onChange={(e) => { SetMail(e.target.value)}}/>
+        <div className="login-page-container">
+            <div className='login-container'>
+                <h1 className='login-header-title'>Se connecter</h1>
+                <h2 className='login-header-subtitle'>Afin d’interagir avec les autres membres de Naapp et voir leurs publications, veuillez vous connecter à votre compte.</h2>
+                <form className='form-container'>
+                    <div className='form-input-container'>
+                        <input type="email" className='form-input  form-input-email' onChange={(e) => { SetMail(e.target.value) }} />
                     </div>
-                    <div className='input-containerpsw'>
-                        
-                        <input type="password" className='login-input  login-input-password' onChange={(e) => { SetPassWord(e.target.value)}}/>
+                    <div className='form-input-container--password'>
+                        <input type="password" className='form-input  form-input-password' onChange={(e) => { SetPassWord(e.target.value) }} />
                     </div>
-                    <a className='new-account-button'href='/register'>crée un compte</a>
 
-                    <button className='login-form-submit' type="submit" onClick={() => props.handleSubmit(Mail , passWord)}>Envoyer</button>
+                    <button className='form-submit' type="submit" onClick={() => props.handleSubmit(Mail, passWord)}>Envoyer</button>
+
+                    <a className='form-register-btn' href='/register'>crée un compte</a>
+
                 </form>
             </div>
         </div>

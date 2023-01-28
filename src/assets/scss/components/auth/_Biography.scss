@@ -1,26 +1,29 @@
-@use '../variables/colors';
-@use '../variables/fonts';
-.Bio-Text-box{
+@use '../../variables/colors';
+@use '../../variables/fonts';
+
+.Bio-Text-box {
     background-color: #E4E4E4;
     border: transparent solid;
     margin-bottom: 40px;
     min-width: 35em;
     min-height: 15em;
     font-size: 18px;
-    resize: none;   
+    resize: none;
 }
-.Bio-Text-box:focus{
+
+.Bio-Text-box:focus {
     border: colors.$primary 5px solid;
 }
 
-.LeftMargin-Button35{
+.LeftMargin-Button35 {
     margin-left: 35em;
 }
-.LeftMargin-Button18{
+
+.LeftMargin-Button18 {
     margin-left: 18em;
 }
 
-.Bio-ignore-font{
+.Bio-ignore-font {
     margin-left: 44em;
     border-color: transparent;
     background-color: transparent;
