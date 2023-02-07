@@ -4,74 +4,106 @@
 
 
 .sidebar {
-    background: colors.$Degraded;
+    background: hsla(222, 97%, 76%, 1);
+    background: linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
+    background: -moz-linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
+    background: -webkit-linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
     height: 100vh;
-    width: 25vw;
-    max-width: 450px;
-    padding: 0 25px;
+    flex-basis: 30%;
+    min-width: 300px;
+    max-width: 425px;
+    padding: 0 50px;
     display: flex;
-}
-.sidebar input[type="checkbox"] {
-    display: none;
-}
-.sidebar-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30vh;
-}
 
-.sidebar-logo {
-    width: 10vw;
-    background-color: red($color: #000000);
-    border-radius: 100px;
-}
-
-.sidebar-content {
-    color: white;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 1vw;
-}
-
-.sidebar-content-next{
-    display: flex;
-    justify-content: center;
-    font-style: bold;
-    text-decoration: underline;
-    width: 100%;
-    margin-top: 30px;
-    font-size: 1.2vw;
-}
-.sidebar-footer {
-
-    color: black;
-    font-style: bold;
-    width: 70%;
-    margin-top: 10px;
-    font-size: 0.7vw;
-    :hover{
-        color: white;
+    @include mixins.breakpoint-up('medium') {
+        flex-basis: 40%;
     }
 }
 
-
-footer{
-width: 21vw;
-position: fixed;
-  left: 15px;
-  width: 20vw;
-  bottom: 10px;
-  color: white;
-  cursor: pointer;
+.sidebar input[type="checkbox"] {
+    display: none;
 }
 
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-.sidebar-socials {
+.sidebar-logo {
+    width: 200px;
+}
 
-    margin:10px 5px;
-    font-size: 2rem;
-    color: white;
+.sidebar-subtitle {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sidebar-text {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 5px;
+}
+
+.sidebar-text-par {
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.sidebar-reseaux {
+    margin-bottom: 10px;
+}
+
+.sidebar-footer {
+    color: #000000;
+    margin-top: 10px;
+    padding-bottom: 30px;
+
+    &-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &-link {
+        position: relative;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 10px;
+
+        &:hover {
+            color: white !important;
+
+            span {
+                color: #000 !important;
+            }
+        }
+
+        &:visited {
+            color: #000000;
+        }
+    }
+}
+
+.sidebar-spacing {
+    margin: 0 5px;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-logoImg {
+    margin: 10px 5px;
 }
 
 .sidebar-menu-icon {
@@ -82,9 +114,9 @@ position: fixed;
 
 }
 
-@include mixins.breakpoint-up('mobile') {
-    .sidebar{
-        background-color: transparent;
+@include mixins.breakpoint-down('small') {
+    .sidebar {
+        background: transparent;
         height: 100vh;
         width: 100%;
         max-width: 450px;
@@ -93,31 +125,35 @@ position: fixed;
         z-index: 1;
 
     }
+
     .sidebar-menu-icon {
         display: block;
         color: gray;
     }
-    .sidebar #show-menu:checked ~ .sidebar-menu-icon i::before {
+
+    .sidebar #show-menu:checked~.sidebar-menu-icon i::before {
         transition: all 0.3s ease;
         font-size: xx-large;
         content: "\f00d";
     }
 
-    .content {
-        display: block;
+    .sidebar-content {
+        display: flex;
         position: fixed;
-        background-color: #0036C2;
-        background-attachment: fixed;
-    height: 200%;
-    left: -100%;
-    margin-left: 0;
-    max-width: 100%;
-    overflow-y: auto;
-    transition: all 0.3s ease;
-    z-index: 1;
+        background: hsla(222, 97%, 76%, 1);
+        background: linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
+        background: -moz-linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
+        background: -webkit-linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
+        height: 200%;
+        left: -100%;
+        margin-left: 0;
+        max-width: 100%;
+        overflow-y: auto;
+        transition: all 0.3s ease;
+        z-index: 1;
     }
 
-    .sidebar #show-menu:checked ~ .content {
+    .sidebar #show-menu:checked~.sidebar-content {
         left: 0;
     }
 }
