@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 40px;
     width: 70%;
 }
 
@@ -28,56 +28,70 @@
     border: none;
     padding-left: 70px;
     width: 100%;
+    font-family: 'Luciole';
+    font-size: 1.6rem;
+
+    &::placeholder {
+        opacity: 0.6;
+        font-style: italic;
+        font-size: 1.6rem;
+        color: #000;
+        font-family: 'Luciole';
+    }
 }
 
-.form-register-btn {
-    border: transparent;
-    background-color: transparent;
-    margin-bottom: 40px;
+.form-input-label {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    font-size: 16px;
+    color: colors.$grey;
 }
 
-.form-input-email {
-    background: url("../../../icons/sms.svg") no-repeat scroll 10px 10px #E4E4E4 !important;
+.form-input-icon {
+    width: 25px;
+    height: 30px;
+    color: colors.$black;
+    position: absolute;
+    top: 12px;
+    left: 15px;
 }
 
-.form-input-password {
-    background: url("../../../icons/key.svg") no-repeat scroll 10px 10px #E4E4E4 !important;
+.form-input-icon--right {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
 }
 
 .form-input-container::after {
     content: '';
     position: absolute;
-    top: 15px;
-    left: 50px;
-    width: 2px;
-    height: 20px;
+    top: 12px;
+    left: 55px;
+    width: 1px;
+    height: 30px;
     background-color: colors.$primary;
 }
 
-.form-input-containerpsw::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 50px;
-    width: 2px;
-    height: 20px;
-    background-color: colors.$primary;
+.form-input-remember {
+    margin-top: 20px;
+    margin-right: 5px;
 }
 
-.form-form-submit {
-    padding: 10px 15px;
-    background-color: colors.$primary;
-    border-radius: 25px;
-    border: solid 3px transparent;
-    color: #FFF;
-    font-size: 2rem;
-    font-weight: 600;
-    cursor: pointer;
+.form-input-checkbox {
+    margin: 0;
+    margin-right: 5px;
 }
 
-.form-form-submit:hover {
-    background-color: #fff;
-    border: solid 3px colors.$primary;
-    color: colors.$primary;
-    transition: all 0.12s ease-in;
+.form-label-checkbox {
+    padding-bottom: 5px;
+}
+
+.form-register-btn {
+    border: transparent;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+.form-missing {
+    padding-top: 10px;
 }
