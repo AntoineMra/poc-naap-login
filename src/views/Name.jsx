@@ -9,8 +9,9 @@ export const Name = () => {
     const {state} = useLocation() 
 
     const ReturnToPreviousPage = () => {
-        navigate('/register', {state : {DataForTheAccount : state.DataForTheAccount}})
+        navigate('/register')
     }
+
     const SpeudoDataExtraction = (Speudo , FirstName , LastName) => {
         state.DataForTheAccount.Speudo = Speudo
         state.DataForTheAccount.Name = FirstName
