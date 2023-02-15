@@ -15,19 +15,20 @@ export const Register = () => {
         FamilyName: "",
         NeuroBalises : [],
     };
-    const ReturnToPreviousPage = () => {
-        navigate('/')
-    }
     const  EmailAndPassWord = (email , PSW1, PSW2) => {
             //TODO , Mail verification is the email is not already in the DB
             //Todo , create the account in the API
                 DataForTheAccount.Email = email
                 navigate('/name', { state : {DataForTheAccount : DataForTheAccount}})      
     } 
+    const ToLogin = () => {
+        navigate('/')
+    }
+
         return (
-        <div className='login-form'>
+        <div className='Email-MDP-Page'>
             <SideBar/>
-            <NewAccountFirstStep EmailAndPassWord = {EmailAndPassWord} ReturnToPreviousPage={ReturnToPreviousPage}/>
+            <NewAccountFirstStep EmailAndPassWord = {EmailAndPassWord} ToLogin={ToLogin}/>
         </div>
         )
 }

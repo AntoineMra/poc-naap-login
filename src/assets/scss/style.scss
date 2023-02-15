@@ -8,6 +8,7 @@
 @use 'components/auth/forms';
 @use 'components/layout/sidebar';
 @use 'components/auth/userChoice';
+@use 'components/auth/NewAccountFirstStep';
 @use 'components/auth/Biography';
 @use 'components/auth/ASD';
 @use 'components/common/btn.scss';
