@@ -34,10 +34,10 @@ export const Forms = (props) => {
 
                     </div>
                     <button className='btn btn-outlined form-submit' type="submit" onClick={() => props.handleSubmit(mail, passWord, isRemembered)}>Envoyer</button>
-                    <a className='form-missing' href="#">Mot de passe oublié ?</a>
+                    <button className='login-invisible-button' onClick={()  => props.ForgottenPassWord()}><p className='form-missing'>Mot de passe oublié ?</p></button>
                     <div className='login-register'>
                         <h3>Pas encore membre ? Rejoignez nous !</h3>
-                        <button className='btn btn-plain form-register-btn' href='/register'>Créer votre compte</button>
+                        <button className='btn btn-plain form-register-btn' onClick={() => props.ToRegister()}>Créer votre compte</button> 
                     </div>
                 </form>
             </div>

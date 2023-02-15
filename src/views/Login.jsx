@@ -16,6 +16,9 @@ let Data = [
 ]
 
 export const Login = () => {
+
+    let navigate = useNavigate()
+
     const handleSubmit = (email , psw) => {
         console.log('passe')
         let id = -1
@@ -35,17 +38,24 @@ export const Login = () => {
         }
         // Here check if the given email & password match any data in our api
     }
-let navigate = useNavigate()
+
     const onAuthenticationSucces = (id) => {
         // Must redirect to the '/redirected url once user is loged   
         navigate('/redirected')
 
     }
+    const ToRegister = () => {
+        navigate('/register')
+    }
+    const ForgottenPassWord = () => {
+        //! Forgotten password is not implemented yet
+        navigate('/forgottenPassword')
+    }
 
     return (
         <div className='login-form'>
             <SideBar />
-            <Forms handleSubmit={handleSubmit}/>
+            <Forms handleSubmit={handleSubmit} ToRegister={ToRegister} ForgottenPassWord={ForgottenPassWord}/>
         </div>
     )
 }
