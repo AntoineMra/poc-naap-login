@@ -124,19 +124,26 @@
         padding: 0 25px;
         position: fixed;
         z-index: 1;
-        left: -100%;
     }
 
     .sidebar-menu-icon {
-        display: block;
+        display: flex;
         color: gray;
+        height: fit-content;
+        z-index: 6;
+        width: fit-content;
     }
 
     .sidebar #show-menu:checked~.sidebar-menu-icon i::before {
-        transition: all 0.3s ease;
-        font-size: xx-large;
+        font-size: xx-large;    
         content: "\f00d";
-    }
+   }
+
+   .sidebar #show-menu:checked~.sidebar-menu-icon  {
+        position: relative;
+        margin-left: 100%;
+   }
+
 
     .sidebar-content {
         display: flex;
@@ -145,7 +152,7 @@
         background: linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
         background: -moz-linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
         background: -webkit-linear-gradient(270deg, hsla(222, 97%, 76%, 1) 0%, hsla(274, 66%, 70%, 1) 100%);
-        height: 200%;
+        height: 100%;
         left: -100%;
         margin-left: 0;
         max-width: 100%;
