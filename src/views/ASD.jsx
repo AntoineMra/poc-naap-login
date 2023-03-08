@@ -4,6 +4,8 @@ import { SideBar } from '../components/layout/SideBar';
 import { useLocation } from 'react-router-dom';
 import { Asd } from '../components/ASD';
 
+const ASDtype = ["neuroatypique", "autisme", "trouble du spectre autistique", "trouble envahissant du développement", "trouble du développement global", "trouble"]
+
 export const ASD = () => {
     let navigate = useNavigate()
     const { state } = useLocation()
@@ -13,14 +15,13 @@ export const ASD = () => {
     }
 
     const AsdArrayExtraction = (array) => {
-        state.NeuroBalises = array
-        console.log(state)//! Nerobalise don't cross the navigate 
+        state.DataForTheAccount.NeuroBalises = array
         navigate("/FinalRoute",{state : {DataForTheAccount : state.DataForTheAccount}})
     }
         return (
-        <div className='login-form'>
+        <div className='Email-MDP-Page'>
             <SideBar/>
-            <Asd AsdArrayExtraction={AsdArrayExtraction} ReturnToPreviousPage={ReturnToPreviousPage}/>
+            <Asd AsdArrayExtraction={AsdArrayExtraction} ReturnToPreviousPage={ReturnToPreviousPage} ASDtype={ASDtype}/>
         </div>
         )
 

@@ -4,7 +4,6 @@ import { useState } from "react";
 export const Biography = (props) => {
 
     const [Bio, SetBio] = useState("");
-
     return (
 
         <div className="forms-page-container">
