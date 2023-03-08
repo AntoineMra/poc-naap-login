@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import ReturnButton from '../assets/img/ReturnButton.png'
 import EmailImg from "../assets/icons/mail.svg";
 import Password from "../assets/icons/password.svg";
 import Eye from "../assets/icons/eye.svg";
 
 export const NewAccountFirstStep = (props) => {
+    const navigate = useNavigate()
     // TODO: 
     const [firstPassWord, SetPassFirstWord] = useState("");
     const [secondPassWord, SetPassSecondWord] = useState("");
@@ -16,7 +18,7 @@ export const NewAccountFirstStep = (props) => {
     return (
         <div className="login-page-container Email-MDP-flex-column">
                 <div className='Email-MDP-flex'>
-                    <img src={ReturnButton} alt="Bouton pour retourner à la page précédente" onClick={() => props.ToLogin()} className = 'Email-MDP-ButtonToPreviousPage'/>
+                    <img src={ReturnButton} alt="Bouton pour retourner à la page précédente" onClick={() => navigate("/")} className = 'Email-MDP-ButtonToPreviousPage'/>
                     <h1 className='login-header-title'>Inscrivez - vous !</h1>
                 </div>
             <div className='login-container'>
@@ -43,7 +45,7 @@ export const NewAccountFirstStep = (props) => {
 
                     <div className='Email-MDP-MarginTop'>
                         <h3 className='Email-MDP-ReCenter'>Déja membre ?</h3>
-                        <button className='btn btn-plain form-register-btn' onClick={() => props.ToLogin()}>Se Connecter</button> 
+                        <button className='btn btn-plain form-register-btn' onClick={() => navigate("/")}>Se Connecter</button> 
                     </div>
                 </form>
             </div>

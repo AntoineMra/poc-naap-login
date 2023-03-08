@@ -1,7 +1,9 @@
 import React from 'react'
 import ReturnButton from '../assets/img/ReturnButton.png'
+import {useNavigate} from 'react-router-dom';
 
 export const Asd = (props) => {
+    const navigate = useNavigate()
     const ArrayOfTypeToReturn = []
     const Addtype = (e) => {
         let AllReadyIn = false
@@ -29,7 +31,7 @@ export const Asd = (props) => {
    
     return (
         <div >
-            <img src={ReturnButton} alt="bouton pour retourner à la page précédente" onClick={() => props.ReturnToPreviousPage()} className = 'Email-MDP-ButtonToPreviousPage'/>
+            <img src={ReturnButton} alt="bouton pour retourner à la page précédente" onClick={() => navigate("/userChoice")} className = 'Email-MDP-ButtonToPreviousPage'/>
             {listItems}
             <button className='ASD-Button' onClick={() => props.AsdArrayExtraction(ArrayOfTypeToReturn)}>Valider</button>
         </div>

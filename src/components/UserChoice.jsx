@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 
 
 export const UserChoice = (props) => {
-
+    const navigate = useNavigate()
     const [role, SetRole] = useState("");
 
 
@@ -12,7 +13,7 @@ export const UserChoice = (props) => {
 
     return (
         <div className="forms-page-container">
-            <button className='ButtonButton-To-Previous-Page' type="submit" onClick={() => props.ReturnToPreviousPage()}/>
+            <button className='ButtonButton-To-Previous-Page' type="submit" onClick={() => navigate("/name")}/>
             <div className='forms-container'>
                 <h1 className='form-header-title title-header'>Indiquez nous qui vous êtes !</h1>
             <div className="radio-container" onChange={(e) => { SetRole(e.target.value)}}>

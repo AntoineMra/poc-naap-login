@@ -9,10 +9,6 @@ const ASDtype = ["neuroatypique", "autisme", "trouble du spectre autistique", "t
 export const ASD = () => {
     let navigate = useNavigate()
     const { state } = useLocation()
-    
-    const ReturnToPreviousPage = () => {
-        navigate('/userChoice', {state : {DataForTheAccount : state.DataForTheAccount}})
-    }
 
     const AsdArrayExtraction = (array) => {
         state.DataForTheAccount.NeuroBalises = array
@@ -21,7 +17,7 @@ export const ASD = () => {
         return (
         <div className='Email-MDP-Page'>
             <SideBar/>
-            <Asd AsdArrayExtraction={AsdArrayExtraction} ReturnToPreviousPage={ReturnToPreviousPage} ASDtype={ASDtype}/>
+            <Asd AsdArrayExtraction={AsdArrayExtraction}  ASDtype={ASDtype}/>
         </div>
         )
 
