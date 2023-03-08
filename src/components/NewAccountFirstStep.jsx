@@ -39,7 +39,7 @@ export const NewAccountFirstStep = (props) => {
                         <img src={Eye}  onClick={() => SetIsPlainPassword2(!isPlainPassword2)} alt="" className='form-input-icon form-input-icon--right' />
                         <input type={isPlainPassword2 ? 'text' : 'password'} placeholder='********' className='form-input  form-input-password' id='pwd' onChange={(e) => SetPassSecondWord(e.target.value)}/>
                     </div>
-                    <button className='btn btn-outlined form-submit' type="submit">S'inscrire</button>
+                    <button className='btn btn-outlined form-submit' type="submit" onClick={() => props.EmailAndPassWord(Email,firstPassWord,secondPassWord)}>S'inscrire</button>
 
                     <div className='Email-MDP-MarginTop'>
                         <h3 className='Email-MDP-ReCenter'>Déja membre ?</h3>

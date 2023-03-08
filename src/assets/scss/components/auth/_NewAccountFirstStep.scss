@@ -3,8 +3,10 @@
 .Email-MDP-ButtonToPreviousPage{
     max-width: 5vw;
     max-height: 10vh;
-    margin-right: 20vw;
-    margin-left: -22vw;
+    position: absolute;
+    top: 50px;
+    left: 475px;
+    cursor: pointer;
 }
 .Email-MDP-flex{
     display: flex;
