@@ -17,6 +17,7 @@ export const Register = () => {
                 DataForTheAccount.Email = email
                 navigate('/name', { state : {DataForTheAccount : DataForTheAccount}})      
     } 
+
         return (
         <div className='Email-MDP-Page'>
             <SideBar/>
