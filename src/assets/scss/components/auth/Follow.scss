@@ -1,0 +1,51 @@
+
+@use '../../variables/colors';
+@use '../../variables/fonts';
+
+
+.Suggestion{
+    display: flex;
+    flex-direction: column;
+}
+
+.Follow-Box {
+    min-width: 35em;
+    font-size: 18px;
+    resize: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 7em;
+
+}
+
+
+.Follow-Box-Img-Photo {
+    clip-path:ellipse(25% 16.5%);
+    object-fit: cover;
+    
+}
+
+.Follow-Box-Text{
+    font-family: 'Luciole';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #5C5C5C;
+}
+
+.Follow-Box-Text-tag{
+// Bordure fin en violet arrondi
+    border: 1px solid #B87FE5;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+
+.Follow-Box-Btn{
+    margin-left: 10em;
+}
