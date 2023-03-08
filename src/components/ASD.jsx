@@ -13,7 +13,6 @@ export const Asd = (props) => {
         if (OtherOn) {
             ArrayOfTypeToReturn.push(Other) 
         } 
-        console.log(ArrayOfTypeToReturn)
         props.AsdArrayExtraction(ArrayOfTypeToReturn)
     }
     const Addtype = (e) => {
@@ -43,7 +42,7 @@ export const Asd = (props) => {
         <div className='ASD-Contener'>
             <h1 className='ASD-Title'> Dites nous en plus !</h1>
             <h2 className='ASD-Subtitle'>Les balises apparaîtrons sur votre profile afin de permettre aux autres utilisateurs d'identifier vos caractèristique </h2>
-            <img src={ReturnButton} alt="bouton pour retourner à la page précédente" onClick={() => props.ReturnToPreviousPage()} className = 'Email-MDP-ButtonToPreviousPage'/>
+            <img src={ReturnButton} alt="bouton pour retourner à la page précédente" onClick={() => navigate("/userChoice")} className = 'Email-MDP-ButtonToPreviousPage'/>
             <div className='ASD-ItemList'>
                 {listItems} 
                 <div className='ASD-Div-Label'>
