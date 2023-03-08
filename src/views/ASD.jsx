@@ -4,15 +4,11 @@ import { SideBar } from '../components/layout/SideBar';
 import { useLocation } from 'react-router-dom';
 import { Asd } from '../components/ASD';
 
-const ASDtype = ["neuroatypique", "autisme", "trouble du spectre autistique", "trouble envahissant du développement", "trouble du développement global", "trouble"]
+const ASDtype = ["Dysléxie", "Dyscalculie", "Dysphasie", "Dysorthographique", "Dyspraxie", "Dysgraphie","TDA","Hyperactivité", "TSA","HPI","THPI","HPE","Hypersensibilité","TOC","TOP"]
 
 export const ASD = () => {
     let navigate = useNavigate()
     const { state } = useLocation()
-    
-    const ReturnToPreviousPage = () => {
-        navigate('/userChoice', {state : {DataForTheAccount : state.DataForTheAccount}})
-    }
 
     const AsdArrayExtraction = (array) => {
         state.DataForTheAccount.NeuroBalises = array
@@ -21,7 +17,7 @@ export const ASD = () => {
         return (
         <div className='Email-MDP-Page'>
             <SideBar/>
-            <Asd AsdArrayExtraction={AsdArrayExtraction} ReturnToPreviousPage={ReturnToPreviousPage} ASDtype={ASDtype}/>
+            <Asd AsdArrayExtraction={AsdArrayExtraction}  ASDtype={ASDtype}/>
         </div>
         )
 
