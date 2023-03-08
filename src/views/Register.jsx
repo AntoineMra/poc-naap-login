@@ -24,10 +24,6 @@ export const Register = () => {
     const ToLogin = () => {
         navigate('/')
     }
-    const ToPreviousPage = () => {
-        navigate(-1)
-    }
-
         return (
         <div className='Email-MDP-Page'>
             <SideBar/>
