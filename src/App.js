@@ -1,3 +1,5 @@
+
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Choice } from './views/UserChoices';
 import { Login } from './views/Login';
@@ -7,6 +9,7 @@ import { ASD } from './views/ASD';
 import { Professional } from './views/Professional';
 import { FinalRoute } from './views/FinalRoute'; 
 import { Name } from './views/Name';
+import {FOLLOW} from './views/Follow';
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
           <Route path='/NEUROATYPIQUE' element={<ASD />} />
           <Route path='/Professionel' element={<Professional />} />
           <Route path='/FinalRoute' element={<FinalRoute />} />
+          <Route path='/Follow' element={<FOLLOW />} />
         </Routes>
       </BrowserRouter>
     </>

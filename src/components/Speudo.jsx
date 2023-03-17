@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import EmailImg from "../assets/icons/mail.svg";
 import ReturnButton from '../assets/img/ReturnButton.png'
 
 export const Speudo = (props) => {
     // TODO: 
-
+    const navigate = useNavigate()
     const [Speudo,  SetSpeudo] = useState("");
     const [FirstName, SetFirstName] = useState("");
     const [LastName, SetLastName] = useState("");
@@ -15,7 +16,7 @@ export const Speudo = (props) => {
     return (
         <div className="login-page-container Email-MDP-flex-column">
                 <div className='Email-MDP-flex'>
-                    <img src={ReturnButton} alt="Bouton pour retourner à la page précédente" onClick={() => props.ReturnToPreviousPage()} className = 'Email-MDP-ButtonToPreviousPage'/>
+                    <img src={ReturnButton} alt="Bouton pour retourner à la page précédente" onClick={() => navigate("/register")} className = 'Email-MDP-ButtonToPreviousPage'/>
                     <h1 className='login-header-title'>Renseignez vos informations</h1>
                 </div>
             <div className='login-container'>

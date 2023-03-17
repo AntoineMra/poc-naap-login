@@ -1,3 +1,87 @@
 @use '../../variables/colors';
 @use '../../variables/fonts';
 
+
+
+.ASD-Contener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8vw;
+    margin-top: 10vh;
+    align-items: start;
+}
+
+.ASD-Title {
+    font-family: "Luciole" ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 2vh;
+}
+.ASD-Checkbox:checked ~ .ASD-Hidden-Input {
+    display: block;
+    margin-left: 2rem;
+    border-radius: 20px;
+    border : 3px colors.$secondary solid;
+    font-size: 3rem;
+}
+
+.ASD-Checkbox {
+    display : none ;
+}
+
+.ASD-TextLabel {
+    color : black ;
+    font-family: "Luciole ";
+    font-size: 1.2rem;
+    border : 3px transparent solid;
+    background: #E4E4E4;
+    border-radius: 20px;  
+    padding: 1.5rem;
+    font-size: 18px;
+}
+.ASD-TextLabel:hover {
+    border : 3px colors.$secondary solid;
+    background: #E4E4E4;
+
+}
+.ASD-Checkbox:checked+label {
+    color: #ffffff;
+    background-color : colors.$secondary ;
+    cursor: pointer;
+}
+
+.ASD-ItemList {
+    display: flex;
+    flex-wrap : wrap ;
+    align-content: stretch;
+    margin-top: 1rem;
+    width: 50vw;
+    gap: 2rem 2rem;
+}
+
+.ASD-Subtitle {
+    margin-bottom: 2 vh;
+    font-family: "Luciole" ;
+    text-align: center;
+    font-size:  2.5rem;
+    line-height: 1.4;
+    width: 70%;
+}
+
+.ASD-Hidden-Input{
+    display: none;
+    max-width: 16.5vw;
+}
+
+.ASD-Div-Label {
+    margin-top: 3rem;
+    display: flex;
+}
+
+.ASD-Bnt-Next {
+    margin-left : 35vw ;
+    margin-top: 2vh;
+}
