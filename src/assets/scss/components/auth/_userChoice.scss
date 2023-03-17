@@ -1,23 +1,35 @@
 @use '../../variables/colors';
 @use '../../variables/fonts';
 
-.test {
-    width: 100%;
-    height: 100vh;
+.previousPageSection{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute ;
+    top: 50px; 
+    left:475px;
 }
 
+
 .title-header {
-    border-bottom: 5px solid gray;
+    font-size: 32px;
+}
+
+.form-header-subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+
+}
+.form-header-subtitle2 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: colors.$grey;
+    max-width: 420px;
+    margin-left: 10px;
 }
 
 .radio-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items:flex-start;
     margin-top: 35px;
 
     input[type="radio"] {
@@ -25,12 +37,24 @@
     }
 }
 
+.forms-page-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 input[type="radio"].role+label {
     background-color: #E4E4E4;
-    height: 10vh;
-    width: 50vw;
-    color: colors.$primary;
+    color: colors.$black;
     line-height: 1.5;
     border-radius: 5px;
     font-size: x-large;
@@ -38,8 +62,11 @@ input[type="radio"].role+label {
     text-align: center;
     cursor: pointer;
     vertical-align: middle;
-
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 30px;
+    gap: 20px;
 }
 
 input[type="radio"].role:checked+label {
@@ -73,4 +100,19 @@ input[type="radio"].role:checked+label {
     border: solid 3px colors.$primary;
     color: colors.$primary;
     transition: 0.3s;
+}
+
+.form-input-icon {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.forms-container {
+    display: flex;
+    align-items:flex-start;
 }
