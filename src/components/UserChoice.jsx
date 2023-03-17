@@ -1,11 +1,8 @@
 import React from 'react'
 import { useState } from "react";
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
-=======
 import ChevronR from '../assets/icons/chevronR.svg';
 import ReturnButton from '../assets/icons/ReturnButton.svg';
->>>>>>> Juliette
 
 
 
