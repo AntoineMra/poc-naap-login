@@ -25,7 +25,7 @@ export const Speudo = (props) => {
                     <div className='form-input-container Speudo-Input-Min-Width'>
                         <label className='form-input-label' htmlFor="email">Pseudonyme</label>
                         <img src={EmailImg} alt="" className='form-input-icon' />
-                        <input type="email" placeholder='Pseudonyme' className='form-input  form-input-email' id='email' onChange={(e) => SetSpeudo(e.target.value)}/>
+                        <input type="text" placeholder='Pseudonyme' className='form-input  form-input-email' id='email' onChange={(e) => SetSpeudo(e.target.value)}/>
                     </div>
                     <div className='form-input-container form-input-container--password Speudo-Input-Min-Width'>
                         <label className='form-input-label' htmlFor="pwd">Prénom</label>
