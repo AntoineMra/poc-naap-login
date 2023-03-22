@@ -45,8 +45,8 @@ export const Follow = (props) => {
                 
 
                     
-                    <button className='btn btn-plain form-register-btn Speudo-Bnt-Next-Page' type="submit" >Suivant</button>
-                    <button className='Bio-ignore-font  form-register-btn Speudo-Bnt-Next-Page' type="submit" >Passer cette étape</button>
+                    <button className='btn btn-plain form-register-btn Speudo-Bnt-Next-Page' type="submit"  onClick={() => props.Next()}>Suivant</button>
+                    <button className='Bio-ignore-font  form-register-btn Speudo-Bnt-Next-Page' type="submit"onClick={() => props.Next()} >Passer cette étape</button>
                     
                 </form>
             </div>
