@@ -103,10 +103,9 @@ input[type="radio"].role:checked+label {
 }
 
 .form-input-icon {
-    left: auto;
+
     right: 15px;
     cursor: pointer;
-    position: static;
     display: flex;
     align-items: center;
     justify-content: space-between; 
