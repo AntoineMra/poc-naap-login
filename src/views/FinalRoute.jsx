@@ -8,7 +8,7 @@ export const FinalRoute = () => {
     
     const navigate = useNavigate() 
     const {state} = useLocation()
-    console.log(state.DataForTheAccount.NeuroBalises)
+    
     const ReturnToPreviousPage = () => {
         if(state.DataForTheAccount.Role !== "Curieux") {
         navigate('/'+state.DataForTheAccount.Role, {state : {DataForTheAccount : state.DataForTheAccount}})

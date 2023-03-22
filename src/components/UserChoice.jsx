@@ -1,23 +1,17 @@
 import React from 'react'
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
 import ChevronR from '../assets/icons/chevronR.svg';
 import ReturnButton from '../assets/icons/ReturnButton.svg';
 
 
 
 export const UserChoice = (props) => {
-    const navigate = useNavigate()
     const [role, SetRole] = useState("");
-
-
-
-
     return (
         <div className="forms-page-container">
             <div className='forms-container'>
                 <div className="previousPageSection">
-                    <img src={ReturnButton} alt="Bouton pour retourner à la page précédente" onClick={() => navigate("/name")} className="ButtonToPreviousPage" />
+                    <img src={ReturnButton} alt="Bouton pour retourner à la page précédente" onClick={() => props.ToPreviousPage()} className="ButtonToPreviousPage" />
                 </div>
                 <h1 className='form-header-title title-header'>Indiquez nous qui vous êtes !</h1>
                 <h2 className='form-header-subtitle'>Afin de vous orienter au mieux sur Naapp, identifiez vous sous un certain profil</h2>

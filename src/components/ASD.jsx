@@ -1,12 +1,10 @@
 import React from 'react'
 import ReturnButton from '../assets/icons/ReturnButton.svg';
-import {useNavigate} from 'react-router-dom';
 import { useState } from "react";
 
 const ArrayOfTypeToReturn = []
 
 export const Asd = (props) => {
-    const navigate = useNavigate()
     const [Other,  SetOther] = useState("");
     const [OtherOn,  SetOtherOn] = useState(false);
     const Next = () => {
@@ -42,7 +40,7 @@ export const Asd = (props) => {
         <div className='ASD-Contener'>
             <h1 className='ASD-Title'> Dites nous en plus !</h1>
             <h2 className='ASD-Subtitle'>Les balises apparaîtrons sur votre profile afin de permettre aux autres utilisateurs d'identifier vos caractèristique </h2>
-            <img src={ReturnButton} alt="bouton pour retourner à la page précédente" onClick={() => navigate("/userChoice")} className = 'Email-MDP-ButtonToPreviousPage'/>
+            <img src={ReturnButton} alt="bouton pour retourner à la page précédente" onClick={() => props.ReturnToPreviousPage()} className = 'Email-MDP-ButtonToPreviousPage'/>
             <div className='ASD-ItemList'>
                 {listItems} 
                 <div className='ASD-Div-Label'>

@@ -10,6 +10,10 @@ export const ASD = () => {
     let navigate = useNavigate()
     const { state } = useLocation()
 
+    const ReturnToPreviousPage = () => {
+        navigate('/userChoice', {state : {DataForTheAccount : state.DataForTheAccount}}) 
+    }
+
     const AsdArrayExtraction = (array) => {
         state.DataForTheAccount.NeuroBalises = array
         navigate("/FinalRoute",{state : {DataForTheAccount : state.DataForTheAccount}})
@@ -17,7 +21,7 @@ export const ASD = () => {
         return (
         <div className='Email-MDP-Page'>
             <SideBar/>
-            <Asd AsdArrayExtraction={AsdArrayExtraction}  ASDtype={ASDtype}/>
+            <Asd AsdArrayExtraction={AsdArrayExtraction}  ASDtype={ASDtype} ReturnToPreviousPage={ReturnToPreviousPage}/>
         </div>
         )
 

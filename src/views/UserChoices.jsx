@@ -7,7 +7,6 @@ export const Choice = () => {
 
     const navigate = useNavigate()
     const {state} = useLocation() 
-
     const SaveRole = (role) => {
         state.DataForTheAccount.Role = role
         switch(role) {
@@ -25,11 +24,14 @@ export const Choice = () => {
         };
 
     }
+    const ToPreviousPage = () => {
+        navigate("/name",{state : {DataForTheAccount : state.DataForTheAccount}})
+    }
         //! Role
         return (
             <div className='login-form'>
                 <SideBar/>
-                <UserChoice saveRole={SaveRole}/>
+                <UserChoice saveRole={SaveRole} ToPreviousPage = {ToPreviousPage}/>
             </div>
         )
     }
