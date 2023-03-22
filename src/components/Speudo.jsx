@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import EmailImg from "../assets/icons/mail.svg";
-import ReturnButton from '../assets/img/ReturnButton.png'
+import ReturnButton from '../assets/icons/ReturnButton.svg';
 
 export const Speudo = (props) => {
     // TODO: 
@@ -25,7 +25,7 @@ export const Speudo = (props) => {
                     <div className='form-input-container Speudo-Input-Min-Width'>
                         <label className='form-input-label' htmlFor="email">Pseudonyme</label>
                         <img src={EmailImg} alt="" className='form-input-icon' />
-                        <input type="email" placeholder='Pseudonyme' className='form-input  form-input-email' id='email' onChange={(e) => SetSpeudo(e.target.value)}/>
+                        <input type="text" placeholder='Pseudonyme' className='form-input  form-input-email' id='email' onChange={(e) => SetSpeudo(e.target.value)}/>
                     </div>
                     <div className='form-input-container form-input-container--password Speudo-Input-Min-Width'>
                         <label className='form-input-label' htmlFor="pwd">Prénom</label>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import ReturnButton from '../assets/img/ReturnButton.png'
+import ReturnButton from '../assets/icons/ReturnButton.svg';
 
 export const Biography = (props) => {
 
