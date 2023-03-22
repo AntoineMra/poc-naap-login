@@ -1,5 +1,5 @@
 import React from 'react'
-import ReturnButton from '../assets/img/ReturnButton.png'
+import ReturnButton from '../assets/icons/ReturnButton.svg';
 import {useNavigate} from 'react-router-dom';
 import { useState } from "react";
 
