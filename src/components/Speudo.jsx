@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import EmailImg from "../assets/icons/mail.svg";
-import ReturnButton from '../assets/img/ReturnButton.png'
+import ReturnButton from '../assets/icons/ReturnButton.svg';
 
 export const Speudo = (props) => {
     // TODO: 

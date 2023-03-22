@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import ReturnButton from '../assets/img/ReturnButton.png'
+import ReturnButton from '../assets/icons/ReturnButton.svg';
 import EmailImg from "../assets/icons/mail.svg";
 import Password from "../assets/icons/password.svg";
 import Eye from "../assets/icons/eye.svg";
