@@ -48,8 +48,7 @@ export const Login = () => {
         navigate('/register')
     }
     const ForgottenPassWord = () => {
-        //! Forgotten password is not implemented yet
-        navigate('/forgottenPassword')
+        navigate('/ForgottenPSW')
     }
 
     return (
