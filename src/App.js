@@ -10,6 +10,7 @@ import { Professional } from './views/Professional';
 import { FinalRoute } from './views/FinalRoute'; 
 import { Name } from './views/Name';
 import {FOLLOW} from './views/Follow';
+import {ForgottenPSW} from './views/ForgottenPSW';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/Professionel' element={<Professional />} />
           <Route path='/FinalRoute' element={<FinalRoute />} />
           <Route path='/Follow' element={<FOLLOW />} />
+          <Route path='/ForgottenPSW' element={<ForgottenPSW />} />
         </Routes>
       </BrowserRouter>
     </>
