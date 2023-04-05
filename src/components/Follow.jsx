@@ -21,14 +21,6 @@ export const Follow = (props) => {
                             <img src="https://picsum.photos/200/300" alt="Photo de profil" className='Follow-Box-Img-Photo'/>
                             <div className='Follow-Box-Text'>
                                 <h3 className='Follow-Box-Text-Name'>Nom</h3>
-                                <p className='Follow-Box-Text-Description'>Description</p>
-                                </div>
-                            <button className='btn btn-plain form-register-btn Follow-Box-Btn' type="submit" >Suivre</button>
-                    </div>
-                    <div className='Follow-Box'>
-                            <img src="https://picsum.photos/200/300" alt="Photo de profil" className='Follow-Box-Img-Photo'/>
-                            <div className='Follow-Box-Text'>
-                                <h3 className='Follow-Box-Text-Name'>Nom</h3>
                                 <p className='Follow-Box-Text-tag'>Description</p>
                                 </div>
                             <button className='btn btn-plain form-register-btn Follow-Box-Btn' type="submit" >Suivre</button>
@@ -37,7 +29,18 @@ export const Follow = (props) => {
                             <img src="https://picsum.photos/200/300" alt="Photo de profil" className='Follow-Box-Img-Photo'/>
                             <div className='Follow-Box-Text'>
                                 <h3 className='Follow-Box-Text-Name'>Nom</h3>
-                                <p className='Follow-Box-Text-Description'>Description</p>
+                                <div className="Tag">
+                                <p className='Follow-Box-Text-tag'>Description</p>
+                                <p className='Follow-Box-Text-tag'>Autres</p>
+                                </div>
+                                </div>
+                            <button className='btn btn-plain form-register-btn Follow-Box-Btn' type="submit" >Suivre</button>
+                    </div>
+                    <div className='Follow-Box'>
+                            <img src="https://picsum.photos/200/300" alt="Photo de profil" className='Follow-Box-Img-Photo'/>
+                            <div className='Follow-Box-Text'>
+                                <h3 className='Follow-Box-Text-Name'>Nom</h3>
+                                <p className='Follow-Box-Text-tag'>Description</p>
                                 </div>
                             <button className='btn btn-plain form-register-btn Follow-Box-Btn' type="submit" >Suivre</button>
                     </div>

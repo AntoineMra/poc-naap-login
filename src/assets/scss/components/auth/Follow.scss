@@ -17,6 +17,7 @@
     flex-direction: row;
     align-items: center;
     height: 7em;
+    gap: 1em;
 
 }
 
@@ -34,6 +35,7 @@
     font-size: 14px;
     line-height: 19px;
     color: #5C5C5C;
+    width: 15em;
 }
 
 .Follow-Box-Text-tag{
@@ -43,9 +45,16 @@
     border-radius: 10px;
     padding: 0.5em;
     margin: 0.5em;
+    width: fit-content;
 }
 
 
 .Follow-Box-Btn{
-    margin-left: 10em;
+    width: 20%;
+
+    
+}
+
+.Tag{
+    display : flex ;
 }
