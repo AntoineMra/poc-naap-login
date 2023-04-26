@@ -11,6 +11,7 @@ import { FinalRoute } from './views/FinalRoute';
 import { Name } from './views/Name';
 import {FOLLOW} from './views/Follow';
 import {ForgottenPSW} from './views/ForgottenPSW';
+import {NewsPage} from './views/NewsPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/FinalRoute' element={<FinalRoute />} />
           <Route path='/Follow' element={<FOLLOW />} />
           <Route path='/ForgottenPSW' element={<ForgottenPSW />} />
+          <Route path='/MainInApp' element={<NewsPage />} />
         </Routes>
       </BrowserRouter>
     </>

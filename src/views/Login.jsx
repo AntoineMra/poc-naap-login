@@ -7,11 +7,19 @@ import { useNavigate } from 'react-router-dom';
 let Data = [
     {
         'email': "g@y.com",
-        'mdp': 'ynov'
+        'mdp': 'ynov',
+        'InterestCenter' : [],
+        'NeuroBalises' : [],
+        "Name" : "Gurvan",
+        'FamilyName' : "Nicolas",
     },
     {
         'email': "k@y.com",
-        'mdp': 'ynov'
+        'mdp': 'ynov',
+        'InterestCenter' : [],
+        'NeuroBalises' : ["Dysléxie", "Dyscalculie", "Dysphasie","TDA"],
+        "Name" : "Noa",
+        "FamilyName" : "LeFaux"
     }
 ]
 
@@ -20,7 +28,6 @@ export const Login = () => {
     let navigate = useNavigate()
 
     const handleSubmit = (email, psw) => {
-        console.log('passe')
         let id = -1
         let lenght = (Data.length - 1)
         while (lenght !== -1) {
@@ -39,13 +46,13 @@ export const Login = () => {
         // Here check if the given email & password match any data in our api
     }
 
-    const onAuthenticationSucces = () => {
+    const onAuthenticationSucces = (id) => {
         // Must redirect to the '/redirected url once user is loged   
-        navigate('/redirected')
+        navigate('/MainInApp' , {state : {Data : Data[id]}})
 
     }
     const ToRegister = () => {
-        navigate('/register')
+        navigate('/register' , {state : {Data : Data}})
     }
     const ForgottenPassWord = () => {
         navigate('/ForgottenPSW')
