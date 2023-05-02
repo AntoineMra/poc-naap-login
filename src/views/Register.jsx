@@ -9,6 +9,14 @@ export const Register = () => {
     const DataForTheAccount = {
         Email : "",
         Role : "",
+        InterestCenter : [],
+        NeuroBalises : [],
+        Name : "",
+        FamilyName : "",
+        Speudo : "",
+        Bio : "",
+        From : "",
+
     };
 
     const  EmailAndPassWord = (email , PSW1, PSW2) => {

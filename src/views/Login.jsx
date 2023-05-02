@@ -6,12 +6,28 @@ import { useNavigate } from 'react-router-dom';
 //Data test 
 let Data = [
     {
-        'email': "g@y.com",
-        'mdp': 'ynov'
+        'Email': "gurvan@y.com",
+        'mdp': 'ynov',
+        'InterestCenter' : [],
+        'NeuroBalises' : [],
+        "Name" : "Gurvan",
+        'FamilyName' : "Nicolas",
+        'Role' : "fatiguer",
+        "Speudo" : "",
+        "Bio" : "Bonjour je suis un dev web qui aime react",
+        "From" : "",
     },
     {
-        'email': "k@y.com",
-        'mdp': 'ynov'
+        'Email': "noa@y.com",
+        'mdp': 'ynov',
+        'InterestCenter' : [],
+        'NeuroBalises' : ["Dysléxie", "Dyscalculie", "Dysphasie","TDA"],
+        "Name" : "Noa",
+        "FamilyName" : "LeFaux",
+        'Role' : "NeuroAtypique",
+        "Speudo" : "",
+        "Bio" : "Bonjour je suis un dev web qui aime le code et les jeux video",
+        "From" : "",
     }
 ]
 
@@ -20,11 +36,10 @@ export const Login = () => {
     let navigate = useNavigate()
 
     const handleSubmit = (email, psw) => {
-        console.log('passe')
         let id = -1
         let lenght = (Data.length - 1)
         while (lenght !== -1) {
-            if (Data[lenght].email === email) {
+            if (Data[lenght].Email === email) {
                 if (Data[lenght].mdp === psw) {
                     id = lenght
                     onAuthenticationSucces(id)
@@ -39,13 +54,13 @@ export const Login = () => {
         // Here check if the given email & password match any data in our api
     }
 
-    const onAuthenticationSucces = () => {
+    const onAuthenticationSucces = (id) => {
         // Must redirect to the '/redirected url once user is loged   
-        navigate('/redirected')
+        navigate('/MainInApp' , {state : {Data : Data[id]}})
 
     }
     const ToRegister = () => {
-        navigate('/register')
+        navigate('/register' , {state : {Data : Data}})
     }
     const ForgottenPassWord = () => {
         navigate('/ForgottenPSW')

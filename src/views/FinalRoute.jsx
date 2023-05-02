@@ -20,7 +20,7 @@ export const FinalRoute = () => {
         //Todo check if the bio is ok with web rules
         state.DataForTheAccount.Bio = BioEntry
         console.log(state.DataForTheAccount)
-        navigate("/Follow",{state : {DataForTheAccount : state.DataForTheAccount}})
+        navigate("/MainInApp",{state : {DataForTheAccount : state.DataForTheAccount}})
 
     }
         return (

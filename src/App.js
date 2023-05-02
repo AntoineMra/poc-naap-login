@@ -11,6 +11,10 @@ import { FinalRoute } from './views/FinalRoute';
 import { Name } from './views/Name';
 import {FOLLOW} from './views/Follow';
 import {ForgottenPSW} from './views/ForgottenPSW';
+import {NewsPage} from './views/NewsPage';
+import {Events} from './views/Events';
+import {Parameters} from './views/Parameters';
+import {Tips} from './views/Tips';
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
           <Route path='/FinalRoute' element={<FinalRoute />} />
           <Route path='/Follow' element={<FOLLOW />} />
           <Route path='/ForgottenPSW' element={<ForgottenPSW />} />
+          <Route path='/MainInApp' element={<NewsPage />} />
+          <Route path='/Events' element={<Events/>} />
+          <Route path='/tips' element={<Tips/>} />
+          <Route path='/settings' element={<Parameters/>} />
         </Routes>
       </BrowserRouter>
     </>

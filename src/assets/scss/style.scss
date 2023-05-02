@@ -9,13 +9,17 @@
 /* 3 - components */
 @use 'components/auth/forms';
 @use 'components/layout/sidebar';
+@use 'components/layout/InternalSideBar';
 @use 'components/auth/userChoice';
 @use 'components/auth/NewAccountFirstStep';
+@use 'components/auth/NewsPage';
+@use 'components/auth/Post';
 @use 'components/auth/Speudo';
 @use 'components/auth/Biography';
 @use 'components/auth/ASD';
 @use 'components/common/btn.scss';
 @use 'components/auth/Follow.scss';
+@use 'components/auth/ComingSoon.scss';
 
 /* 4 - pages */
 
