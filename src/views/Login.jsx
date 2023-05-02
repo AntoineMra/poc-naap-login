@@ -20,7 +20,7 @@ let Data = [
     {
         'Email': "noa@y.com",
         'mdp': 'ynov',
-        'InterestCenter' : [],
+        'InterestCenter' : ["Sport", "Cinéma", "Gastronomie","Dessin/Art","Nature"],
         'NeuroBalises' : ["Dysléxie", "Dyscalculie", "Dysphasie","TDA"],
         "Name" : "Noa",
         "FamilyName" : "LeFaux",

@@ -15,6 +15,7 @@ import {NewsPage} from './views/NewsPage';
 import {Events} from './views/Events';
 import {Parameters} from './views/Parameters';
 import {Tips} from './views/Tips';
+import {Accounts} from './views/Account';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path='/Events' element={<Events/>} />
           <Route path='/tips' element={<Tips/>} />
           <Route path='/settings' element={<Parameters/>} />
+          <Route path='/account' element={<Accounts />} />
         </Routes>
       </BrowserRouter>
     </>
