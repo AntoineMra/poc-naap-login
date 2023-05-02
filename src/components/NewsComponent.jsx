@@ -31,6 +31,10 @@ export const News = (props) => {
     return (
         <>
             <section className="NewsPage-section">
+                <div className="NewsPage-Right-MSG">
+                    <h1>Première Version</h1>
+                    <p>Ceci est une première version de notre application. De nouvelles fonctionnalités arrivent très prochainement !</p>
+                </div>
                 <Post PostInfo={EmptyPost} empty={true}></Post>
                 <Post PostInfo={PostExemple[0]}></Post>
                 <Post PostInfo={PostExemple[1]}></Post>
