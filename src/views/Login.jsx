@@ -6,20 +6,28 @@ import { useNavigate } from 'react-router-dom';
 //Data test 
 let Data = [
     {
-        'email': "g@y.com",
+        'Email': "gurvan@y.com",
         'mdp': 'ynov',
         'InterestCenter' : [],
         'NeuroBalises' : [],
         "Name" : "Gurvan",
         'FamilyName' : "Nicolas",
+        'Role' : "fatiguer",
+        "Speudo" : "",
+        "Bio" : "Bonjour je suis un dev web qui aime react",
+        "From" : "",
     },
     {
-        'email': "k@y.com",
+        'Email': "noa@y.com",
         'mdp': 'ynov',
         'InterestCenter' : [],
         'NeuroBalises' : ["Dysléxie", "Dyscalculie", "Dysphasie","TDA"],
         "Name" : "Noa",
-        "FamilyName" : "LeFaux"
+        "FamilyName" : "LeFaux",
+        'Role' : "NeuroAtypique",
+        "Speudo" : "",
+        "Bio" : "Bonjour je suis un dev web qui aime le code et les jeux video",
+        "From" : "",
     }
 ]
 
@@ -31,7 +39,7 @@ export const Login = () => {
         let id = -1
         let lenght = (Data.length - 1)
         while (lenght !== -1) {
-            if (Data[lenght].email === email) {
+            if (Data[lenght].Email === email) {
                 if (Data[lenght].mdp === psw) {
                     id = lenght
                     onAuthenticationSucces(id)

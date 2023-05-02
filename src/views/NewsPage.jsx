@@ -6,11 +6,10 @@ import { SideBar } from '../components/layout/SideBarIntenalApp';
 export const NewsPage = ()=> {
     const {state} = useLocation() 
     const navigate = useNavigate()
-
 return (
     <section className='FlexForApp'>
         <SideBar state={state}/>
-        <News state={state}></News>
+        <News info={state}></News>
     </section>
 
 )

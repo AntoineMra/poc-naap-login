@@ -1,13 +1,11 @@
 import React from "react";
-import Image from "../assets/icons/Ellipse-temp1.svg"
 import { Post } from "./Post"
 export const News = (props) => {
-
     const EmptyPost = {
-            Name : props.state.Name,
-            FamilyName : props.state.FamilyName,
-            NeuroBalises : props.state.NeuroBalises,
-            Likes : 66,
+            Name : props.info.Data.Name,
+            FamilyName : props.info.Data.FamilyName,
+            NeuroBalises : props.info.Data.NeuroBalises,
+            Likes : 0,
             text : "",
     
         }
@@ -23,7 +21,7 @@ export const News = (props) => {
         {
             Name : "Lise",
             FamilyName :  "Honoré",
-            NeuroBalises : [],
+            NeuroBalises : ["Dyslexique","Hypersensible"],
             Likes : 50164,
             text : "Le news letter de ce mois est très intéressante !",
     
@@ -33,7 +31,9 @@ export const News = (props) => {
     return (
         <>
             <section className="NewsPage-section">
-                <Post></Post>
+                <Post PostInfo={EmptyPost} empty={true}></Post>
+                <Post PostInfo={PostExemple[0]}></Post>
+                <Post PostInfo={PostExemple[1]}></Post>
             </section>
         </>
         
